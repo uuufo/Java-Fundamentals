@@ -18,6 +18,15 @@ public class Exercise_03 {
 
         // write code to print out "Check out my first program!" below
 
+        System.out.println("Check out my first program!");
+        System.out.println("Awesome!!");
+
+        int x = 5;
+        int y = 25;
+        int z = x + y;
+
+        System.out.println("z = " + z);
+
     }
 
 }
