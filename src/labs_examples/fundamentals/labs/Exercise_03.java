@@ -19,7 +19,7 @@ public class Exercise_03 {
         // write code to print out "Check out my first program!" below
 
         System.out.println("Check out my first program!");
-        System.out.println("Awesome!!");
+        System.out.println("Awesome!  What is the value of z?");
 
         int x = 5;
         int y = 25;
