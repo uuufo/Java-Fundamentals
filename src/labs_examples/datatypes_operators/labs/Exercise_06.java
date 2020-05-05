@@ -12,7 +12,17 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-        // write code here
+        double r = 3.14; // radius of cylinder
+        double h = 5;   // height of cylinder
+
+        double v;
+        double s;
+
+        v = 3.14159 * (r * r) * h;
+        s = ((2 * 3.14159) * (r * r)) + ((2 * 3.14159) * (r * h));
+
+        System.out.println("Volume of the cylinder is: " + v);
+        System.out.println("Surface area of the cylinder is: " + s);
 
     }
 }
