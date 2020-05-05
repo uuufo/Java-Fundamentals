@@ -16,7 +16,6 @@ public class Exercise_01 {
 
     public static void main(String[] args) {
 
-        // write code here
         int i;
         double d;
         float f;

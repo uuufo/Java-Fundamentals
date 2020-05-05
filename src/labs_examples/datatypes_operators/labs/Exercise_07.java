@@ -25,5 +25,8 @@ public class Exercise_07 {
 
         // write completed code here
 
+        int s = days * 86400;
+        System.out.println(days + " days equals " + s + " seconds.");
+
     }
 }

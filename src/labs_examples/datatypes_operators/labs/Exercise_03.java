@@ -10,7 +10,6 @@ class ArithmeticOperators {
 
     public static void main(String[] args) {
 
-        // write your code below
         int x = 20;
         int y = x + 5;
         int z = y * 20;
