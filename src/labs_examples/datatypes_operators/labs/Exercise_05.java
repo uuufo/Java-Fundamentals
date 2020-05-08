@@ -19,7 +19,7 @@ class LogicalOperators {
         // write your code below
 
         boolean a = true;
-        boolean b = true;
+        boolean b = false;
 
         if (a) {
             System.out.println("a is true");
@@ -52,7 +52,6 @@ class LogicalOperators {
         if (!b) {
             System.out.println("b is false");
         }
-
 
     }
 
