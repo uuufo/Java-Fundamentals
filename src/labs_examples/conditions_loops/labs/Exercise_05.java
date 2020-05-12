@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 5: Calculator
  *
@@ -16,4 +18,27 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_05 {
+
+    public static void main(String[] args) {
+
+        Scanner prompt = new Scanner(System.in);
+        System.out.print("Enter the first (lower) number: ");
+        int x = prompt.nextInt();
+        System.out.print("Enter the second (higher) number: ");
+        int y = prompt.nextInt();
+
+        double z = x;
+        int intBetween = 1;
+
+        for (int i = x + 1; i <= y; i++) {
+            z += i;
+            intBetween++;
+        }
+
+        System.out.println("Lower range: " + x);
+        System.out.println("Upper range: " + y);
+        System.out.println("The sum is: " + z);
+        System.out.println("The average is: " + z / intBetween);
+
+    }
 }
