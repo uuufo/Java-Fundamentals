@@ -25,13 +25,26 @@ public class Exercise_07 {
 
         String vowels = "aeiou";
 
-        for (int i = 0; i < w.length(); i++) {
+        int i = 0;
+        while (i < w.length()) {
             if (vowels.indexOf(w.charAt(i)) > -1) {
                 System.out.println("The word is: " + w);
                 System.out.println("The first vowel is: " + w.charAt(i));
                 break;
             }
+            i++;
         }
+
+
+        // old code before i realized this needed to use a while loop
+
+        /* for (int i = 0; i < w.length(); i++) {
+            if (vowels.indexOf(w.charAt(i)) > -1) {
+                System.out.println("The word is: " + w);
+                System.out.println("The first vowel is: " + w.charAt(i));
+                break;
+            }
+        } */
 
     }
 
