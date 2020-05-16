@@ -10,4 +10,39 @@ package labs_examples.arrays.labs;
 
 public class Exercise_04 {
 
+    public static void main(String[] args) {
+
+        String[][] names = {
+                {"Johnny", "Sally"},
+                {"Betty", "Bobby", "Billy"},
+                {"Tommy"}
+        };
+
+        for (int i = 0; i < names.length; i++) {
+            for (int o = 0; o < names[i].length; o++) {
+                System.out.print(names[i][o] + " ");
+            }
+            System.out.println();
+        }
+
+        //another way
+
+        int nums[][] = new int[3][];
+        nums[0] = new int[2];
+        nums[1] = new int[10];
+        nums[2] = new int[5];
+        for (int i = 0; i < nums.length; i++) {
+            for (int o = 0; o < nums[i].length; o++) {
+                nums[i][o] = 0;
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int o = 0; o < nums[i].length; o++) {
+                System.out.print(nums[i][o] + " ");
+            }
+            System.out.println();
+        }
+    }
+
 }
