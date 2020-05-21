@@ -10,6 +10,19 @@ public class Exercise_01 {
         // please create the methods as instructed below then
         // call each of those methods from here, within the main()
 
+        System.out.println(multiply(5, 5));
+
+        System.out.println(divide(25, 5));
+
+        joke();
+
+        System.out.println(seconds(5));
+
+        int varargs[] = new int[3];
+
+        System.out.println(varargs(varargs));
+
+
     }
 
 
@@ -30,8 +43,26 @@ public class Exercise_01 {
 
     // 5) Create a varargs method that will return the length of the varargs array passed in
 
+    public static int multiply(int a, int b) {
+        return(a * b);
+    }
 
+    public static int divide(int a, int b) {
+        return(a / b);
+    }
 
+    public static void joke(){
+        System.out.println("Did you hear about the mathematician who's afraid of negative numbers?\n" +
+                "He'll stop at nothing to avoid them.");
+    }
+
+    public static int seconds(int years) {
+        return(years * 31536000);
+    }
+
+    public static int varargs(int[] varargs) {
+        return(varargs.length);
+    }
 
 
 
