@@ -20,6 +20,7 @@ class Exercise {
         }
         System.out.println("Fuel capacity is " + myAirplane.fuelCapacity + " gallons and we are currently " + myAirplane.currentFuelLevel + "% full.");
 
+        System.out.println(myAirplane.toString());
     }
 
 }
@@ -38,6 +39,17 @@ class Airplane {
         this.seats = seats;
         this.windows = windows;
         this.body = body;
+    }
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "fuelCapacity=" + fuelCapacity +
+                ", currentFuelLevel=" + currentFuelLevel +
+                ", engines=" + engines +
+                ", seats=" + seats +
+                ", windows=" + windows +
+                ", body=" + body +
+                '}';
     }
 }
 
