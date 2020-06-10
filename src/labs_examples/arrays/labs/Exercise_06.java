@@ -20,7 +20,7 @@ public class Exercise_06 {
         int temp;
 
         // Question: in the for loop below, why do we divide "nums.length" by 2?
-        // because we are changing 2 numbers each pass?
+        // because we are changing 2 numbers each pass
 
         for(int i = 0; i < nums.length / 2; i++){
             // swap elements at indexes in array

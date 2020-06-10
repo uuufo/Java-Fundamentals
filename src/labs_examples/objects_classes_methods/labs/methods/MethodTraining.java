@@ -1,9 +1,13 @@
 package labs_examples.objects_classes_methods.labs.methods;
 
+import java.util.ArrayList;
+
 public class MethodTraining {
 
     public static void main(String[] args) {
 
+        //Method #2 & 3
+        System.out.println("------ Method #1 & 3 ------");
         int[] test = {1, 4, 568, 400, 8, 15, 567};
         double[] test2 = {3.45, 1.2, 40.5, 32.9};
         System.out.println(getLargeArr(test));
@@ -11,16 +15,59 @@ public class MethodTraining {
 
         System.out.println(getLarge(3769, 645, 6345, 874));
 
+        //Method #4
+        System.out.println("------ Method #4 ------");
+        System.out.println(getConst("test"));
+        System.out.println(getConst2("test"));
+
+        //Method #5
+        System.out.println("------ Method #5 ------");
+        printBart();
+
+        //Method #6
+        System.out.println("------ Method #6 ------");
+        System.out.println(isPrime(11));
+
+        //Method #7
+        System.out.println("------ Method #7 ------");
         int[] hiLo = new int[2];
         hiLo = getHiLo(test);
         System.out.println("Low: " + hiLo[0] + ", High: " + hiLo[1]);
 
-        System.out.println(getConst("test"));
-        System.out.println(getConst2("test"));
+        //Method #8
+        System.out.println("------ Method #8 ------");
+        ArrayList<Integer> testList = new ArrayList<Integer>();
+        testList = numList(100, 2, 25);
+        System.out.println(testList);
+        System.out.println(testList.size());
 
-        printBart();
+        //Method #9
+        System.out.println("------ Method #9 ------");
+        int[] arrNine = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17};
+        revArray(arrNine);
+        for (int i = 0; i < arrNine.length; i++) {
+            System.out.print(arrNine[i] + ", ");
+        }
+    }
 
-        System.out.println(isPrime(11));
+    static int[] revArray(int[] arr) {
+        int t = 0;
+        for (int i = 0; i < arr.length / 2; i++) {
+            t = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = t;
+        }
+        return arr;
+    }
+
+    static ArrayList numList(int maxNum, int divisor1, int divisor2) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for (int i = 0; i <= maxNum; i++) {
+            if (i % divisor1 == 0 && i % divisor2 == 0) {
+                result.add(i);
+            }
+        }
+        return result;
     }
 
     static boolean isPrime(int x) {
