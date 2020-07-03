@@ -6,7 +6,7 @@ public class MethodTraining {
 
     public static void main(String[] args) {
 
-        //Method #2 & 3
+        //Method #1 & 3
         System.out.println("------ Method #1 & 3 ------");
         int[] test = {1, 4, 568, 400, 8, 15, 567};
         double[] test2 = {3.45, 1.2, 40.5, 32.9};
@@ -14,6 +14,17 @@ public class MethodTraining {
         System.out.println(getLargeArr(test2));
 
         System.out.println(getLarge(3769, 645, 6345, 874));
+
+        //Method #2
+        System.out.println("------ Method #2 ------");
+        int x = 5;
+        int y = 10;
+        passVal(x, y);
+        System.out.println("Back in Main, x still equals " + x);
+        System.out.println("Back in Main, y still equals " + y);
+        testObj obj = new testObj("Object1", 32);
+        passRef(obj);
+        System.out.println(obj.toString());
 
         //Method #4
         System.out.println("------ Method #4 ------");
@@ -48,6 +59,18 @@ public class MethodTraining {
         for (int i = 0; i < arrNine.length; i++) {
             System.out.print(arrNine[i] + ", ");
         }
+    }
+
+    static void passRef(testObj obj){
+        obj.name = "Changed Inside Method";
+    }
+
+    static void passVal(int x, int y){
+        x *= 45;
+        y *= 65;
+        System.out.println("Inside passVal, x now equals " + x);
+        System.out.println("Inside passVal, y now equals " + y);
+
     }
 
     static int[] revArray(int[] arr) {
@@ -172,6 +195,23 @@ public class MethodTraining {
         System.out.println(" /____\\ ");
         System.out.println("/      \\");
 
+    }
+
+    static class testObj {
+        String name;
+        int size;
+        public testObj(String name, int size) {
+            this.name = name;
+            this.size = size;
+        }
+
+        @Override
+        public String toString() {
+            return "testObj{" +
+                    "name='" + name + '\'' +
+                    ", size=" + size +
+                    '}';
+        }
     }
 
 }
