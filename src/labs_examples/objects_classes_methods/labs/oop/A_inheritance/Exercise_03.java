@@ -3,7 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer:  ? need clarity
  *
  */
 
@@ -12,6 +12,7 @@ class A_1 {
     {
         System.out.println("Class A Constructor");
     }
+
 }
 
 class B_1 extends A_1 {

@@ -1,7 +1,7 @@
 
 Without running the code below, please tell me what will print. Why?
 
-
+**"Parent Called", then "Child Called", is this because the methods have no return type?  Why don't methods in Exercise_04 get called at creation and these do?
 
 
 public class InheritanceTest
