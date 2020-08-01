@@ -60,7 +60,6 @@ public class BlackjackController {
         } else {
             moneyPot += cpuPlayer.placeBet(cpuPlayer);
         }
-
         System.out.println("The pot is now at $" + moneyPot);
 
         // deal cards until both are done or bust
