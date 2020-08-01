@@ -7,11 +7,7 @@ public class Hand {
     int handValue;
 
     public boolean isBust(Hand hand) {
-        if (getHandValue() > 21) {
-            return true;
-        } else {
-            return false;
-        }
+        return getHandValue() > 21;
     }
 
     public int getHandValue() {
