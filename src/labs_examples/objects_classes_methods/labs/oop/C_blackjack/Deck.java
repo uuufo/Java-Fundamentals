@@ -25,19 +25,23 @@ public class Deck {
         }
     }
 
-    public int randomCard(Deck deck) {
+    public int randomCard() {
         Random rand = new Random();
         int r = rand.nextInt(52);
-        while (deck.usedCards.contains(r)) {
+        while (usedCards.contains(r)) {
                 r = rand.nextInt(52);
         }
-        deck.usedCards.add(r);
+        usedCards.add(r);
         return r;
     }
 
     public Deck() {
         populateDeck();
     }
+
+//    public void deal(Player player) {
+//        player.hand.cards.add(cards[randomCard()]);
+//    }
 }
 
 
