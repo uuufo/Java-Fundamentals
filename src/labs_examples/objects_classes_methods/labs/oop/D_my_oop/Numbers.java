@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Numbers {
 
-    private int userNums = 0;
-
     public int makeUserNumbers(NameGenerator generator) {
 
         String answer;
@@ -18,7 +16,6 @@ public class Numbers {
             answer = scanner.next();
         } while (!generator.checkInput(answer, answers));
 
-        // they want numbers, ask for their own or "random"
         if (answer.startsWith("y")) {
             do {
                 System.out.println("Please enter your favorite number, or type 'random': ");
@@ -36,6 +33,4 @@ public class Numbers {
         Random rand = new Random();
         return rand.nextInt(bound);
     }
-
-
 }

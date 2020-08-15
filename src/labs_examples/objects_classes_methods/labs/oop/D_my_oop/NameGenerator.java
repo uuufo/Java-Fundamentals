@@ -9,38 +9,31 @@ public class NameGenerator {
         NameGenerator generator = new NameGenerator();
         Numbers numbers = new Numbers();
         Topics topics = new Topics();
-        String userName = "";
-        int userNums;
         ArrayList<String> topicList1 = new ArrayList<String>();
         ArrayList<String> topicList2 = new ArrayList<String>();
 
         System.out.println("Welcome to the username generator!");
 
         topics.getUserTopics(generator);
+        topics.readTopicFile(topics.getTopic1(), topicList1);
+        topics.readTopicFile(topics.getTopic2(), topicList2);
+        String userName = topicList1.get(numbers.randomDigits(topicList1.size()));
+        userName += topicList2.get(numbers.randomDigits(topicList2.size()));
 
-        userNums = numbers.makeUserNumbers(generator);
+        int userNums = numbers.makeUserNumbers(generator);
         if (userNums != 0) {
             System.out.println("Cool!  Your numbers are: " + userNums);
+            userName += userNums;
         } else {
             System.out.println("We don't need no stinkin' numbers!");
         }
 
         System.out.println("Now magically calculating your perfect username.");
-
         generator.doSpinner();
 
-        topics.readTopicFile(topics.getTopic1(), topicList1);
-        topics.readTopicFile(topics.getTopic2(), topicList2);
-
-        userName += topicList1.get(numbers.randomDigits(topicList1.size()));
-        userName += topicList2.get(numbers.randomDigits(topicList2.size()));
-        if (userNums != 0) {
-            userName += userNums;
-        }
         System.out.println(userName);
         System.out.println("**********");
         System.out.println("Hope you like it!");
-
     }
 
     public void doSpinner() throws InterruptedException {
@@ -68,6 +61,4 @@ public class NameGenerator {
         System.out.println(userInput + " is not a valid selection, please try again!");
         return false;
     }
-
-
 }

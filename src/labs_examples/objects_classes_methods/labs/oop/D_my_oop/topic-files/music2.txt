@@ -19,7 +19,7 @@ Ragtime
 Song
 Swing
 Metal
-Instrumental
+Instrument
 Pop
 Techno
 Trance

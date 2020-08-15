@@ -10,7 +10,6 @@ public class Topics {
     private String topic1;
     private String topic2;
 
-
     public void getUserTopics(NameGenerator generator) {
 
         String[] topics = {"music", "outdoors", "movies", "fashion"};
@@ -33,31 +32,20 @@ public class Topics {
         System.out.println("Those are two awesome topics.");
     }
 
-    public ArrayList<String> readTopicFile(String topic, ArrayList<String> list) throws FileNotFoundException {
+    public void readTopicFile(String topic, ArrayList<String> list) throws FileNotFoundException {
 
         File file = new File(System.getProperty("user.dir") + "/src/labs_examples/objects_classes_methods/labs/oop/D_my_oop/topic-files/" + topic + ".txt");
         Scanner fileScanner = new Scanner(file);
         while (fileScanner.hasNextLine()) {
             list.add(fileScanner.nextLine());
         }
-        return list;
-
     }
 
     public String getTopic1() {
         return topic1;
     }
 
-    public void setTopic1(String topic1) {
-        this.topic1 = topic1;
-    }
-
     public String getTopic2() {
         return topic2;
     }
-
-    public void setTopic2(String topic2) {
-        this.topic2 = topic2;
-    }
-
 }
