@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Numbers {
 
-    public int getUserNumbers(NameGenerator generator) {
+    private int userNums = 0;
+
+    public int makeUserNumbers(NameGenerator generator) {
 
         String answer;
         Scanner scanner = new Scanner(System.in);
@@ -16,8 +18,8 @@ public class Numbers {
             answer = scanner.next();
         } while (!generator.checkInput(answer, answers));
 
+        // they want numbers, ask for their own or "random"
         if (answer.startsWith("y")) {
-
             do {
                 System.out.println("Please enter your favorite number, or type 'random': ");
                 if (scanner.hasNextInt()) {
@@ -25,14 +27,15 @@ public class Numbers {
                 }
                 answer = scanner.next();
             } while (!generator.checkInput(answer, "random"));
-            return randomDigits();
+            return randomDigits(999);
         }
         return 0;
     }
 
-    public int randomDigits() {
+    public int randomDigits(int bound) {
         Random rand = new Random();
-        int r = rand.nextInt(999);
-        return r;
+        return rand.nextInt(bound);
     }
+
+
 }
