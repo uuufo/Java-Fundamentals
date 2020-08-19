@@ -11,7 +11,7 @@ public class Player {
     private boolean isBust;
     private boolean allIn;
     private final boolean human;
-    private  int betCount;
+    private int betCount;
 
     public boolean computerAI() {
         return hand.getHandValue() < 16;
@@ -19,6 +19,10 @@ public class Player {
 
     public void placeBet() {
         int currentBet;
+        if (potValue == 0) {
+            System.out.println("You don't have any money left to bet!");
+            return;
+        }
         if (this.isHuman()) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("How much?");
