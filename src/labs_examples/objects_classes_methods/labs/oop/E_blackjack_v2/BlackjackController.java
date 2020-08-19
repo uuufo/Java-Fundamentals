@@ -26,6 +26,12 @@ public class BlackjackController {
 
             System.out.println("Game #" + Deck.getDecksPopulated());
             System.out.println();
+            if (Deck.getDecksPopulated() > 1) {
+                System.out.println(humanPlayer.getGamesWon() + " games won by " + humanPlayer.getName() + ".");
+                System.out.println(cpuPlayer.getGamesWon() + " games won by " + cpuPlayer.getName() + ".");
+                System.out.println();
+            }
+
             freshGame(humanPlayer, cpuPlayer);
             dealFirstCards(humanPlayer, cpuPlayer, deck);
 
@@ -86,9 +92,11 @@ public class BlackjackController {
         if (humanValue > cpuValue && !user.isBust()) {
             System.out.println(user.getName() + " won the game, and WINS $" + moneyPot + "!");
             user.setPotValue(user.getPotValue() + moneyPot);
+            user.setGamesWon(user.getGamesWon() + 1);
         } else if (humanValue < cpuValue && !cpu.isBust()) {
             System.out.println(cpu.getName() + " won the game, and WINS $" + moneyPot + "!");
             cpu.setPotValue(cpu.getPotValue() + moneyPot);
+            cpu.setGamesWon(cpu.getGamesWon() + 1);
         } else if (humanValue == cpuValue) {
             System.out.println("It's a push!  All bets returned.");
             user.setPotValue(user.getPotValue() + user.getBet());
@@ -99,10 +107,12 @@ public class BlackjackController {
             System.out.println(cpu.getName() + " went bust!");
             System.out.println(user.getName() + " won the game, and WINS $" + moneyPot + "!");
             user.setPotValue(user.getPotValue() + moneyPot);
+            user.setGamesWon(user.getGamesWon() + 1);
         } else if (user.isBust() && !cpu.isBust()) {
             System.out.println(user.getName() + " went bust!");
             System.out.println(cpu.getName() + " won the game, and WINS $" + moneyPot + "!");
             cpu.setPotValue(cpu.getPotValue() + moneyPot);
+            cpu.setGamesWon(cpu.getGamesWon() + 1);
         } else if (user.isBust() & cpu.isBust()) {
             System.out.println("Both players hands went bust, losers!  All bets returned.");
             user.setPotValue(user.getPotValue() + user.getBet());

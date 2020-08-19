@@ -12,6 +12,7 @@ public class Player {
     private boolean allIn;
     private final boolean human;
     private int betCount;
+    private int gamesWon;
 
     public boolean computerAI() {
         return hand.getHandValue() < 16;
@@ -50,6 +51,14 @@ public class Player {
         this.name = name;
         this.potValue = potValue;
         this.human = human;
+    }
+
+    public int getGamesWon() {
+        return gamesWon;
+    }
+
+    public void setGamesWon(int gamesWon) {
+        this.gamesWon = gamesWon;
     }
 
     public int getBetCount() {

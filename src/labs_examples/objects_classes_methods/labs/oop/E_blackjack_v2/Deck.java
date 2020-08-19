@@ -37,7 +37,6 @@ public class Deck {
     public void deal(Player player) {
         // for (int i = 0; i < 52; i++) {
         player.getHand().getCards().add(cards[randomCard()]);
-
         // }  was to test and make sure the entire deck was being dealt correctly
     }
 
