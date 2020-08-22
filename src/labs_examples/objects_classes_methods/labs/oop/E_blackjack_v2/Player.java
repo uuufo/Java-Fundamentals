@@ -70,6 +70,7 @@ public class Player {
     }
 
     public boolean isBust() {
+        isBust = hand.getHandValue() > 21;
         return isBust;
     }
 

@@ -36,11 +36,12 @@ public class BlackjackController {
             dealFirstCards(humanPlayer, cpuPlayer, deck);
 
             //check if anyone went bust
-            wentBust(humanPlayer);
-            wentBust(cpuPlayer);
-            if (humanPlayer.isBust()) {
-                System.out.println("Well, looks like we went bust... So we aren't going to place any bets.");
+            if (humanPlayer.isBust() || cpuPlayer.isBust()) {
+                if (humanPlayer.isBust()) {
+                    System.out.println("Well, looks like we went bust... So we aren't going to place any bets.");
+                }
             }
+
 
             takeBets(humanPlayer, cpuPlayer);
             while (hitMe(humanPlayer, cpuPlayer, deck)) {
@@ -64,13 +65,6 @@ public class BlackjackController {
         cpu.setBetCount(0);
         user.setAllIn(false);
         cpu.setAllIn(false);
-    }
-
-    private void wentBust(Player player) {
-        if (player.getHand().getHandValue() > 21) {
-            player.setBust(true);
-            player.setDone(true);
-        }
     }
 
     private void endGame(Player user, Player cpu) {
@@ -142,7 +136,7 @@ public class BlackjackController {
                     user.getHand().printHand();
                     System.out.println("Total: " + user.getHand().getHandValue());
                     System.out.println();
-                    wentBust(user); //check if user went bust
+                    //wentBust(user); //check if user went bust
                     if (user.isBust()) {
                         System.out.println("Well, looks like we went bust... So we aren't going to place any more bets.");
                     }
@@ -153,7 +147,7 @@ public class BlackjackController {
             if (cpu.computerAI()) {
                 deck.deal(cpu);
                 System.out.println(cpu.getName() + " was dealt another card.");
-                wentBust(cpu); // check if cpu went bust, if so they are done
+                cpu.isBust(); // check if cpu went bust, if so they are done
             } else {
                 System.out.println(cpu.getName() + " did not take another card.");
                 cpu.setDone(true);

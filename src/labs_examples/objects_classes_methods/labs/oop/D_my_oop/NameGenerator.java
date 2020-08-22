@@ -4,23 +4,24 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class NameGenerator {
-    public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+    public static void main(String[] args) {
 
         NameGenerator generator = new NameGenerator();
         Numbers numbers = new Numbers();
-        Topics topics = new Topics();
-        ArrayList<String> topicList1 = new ArrayList<String>();
-        ArrayList<String> topicList2 = new ArrayList<String>();
+        Topics topics = null;
+        try {
+            topics = new Topics();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
 
         System.out.println("Welcome to the username generator!");
 
-        topics.getUserTopics(generator);
-        topics.readTopicFile(topics.getTopic1(), topicList1);
-        topics.readTopicFile(topics.getTopic2(), topicList2);
-        String userName = topicList1.get(numbers.randomDigits(topicList1.size()));
-        userName += topicList2.get(numbers.randomDigits(topicList2.size()));
+        String userName = topics.getTopicList1().get(numbers.randomDigits(topics.getTopicList1().size()));
+        userName += topics.getTopicList2().get(numbers.randomDigits(topics.getTopicList2().size()));
 
-        int userNums = numbers.makeUserNumbers(generator);
+        int userNums = numbers.makeUserNumbers();
         if (userNums != 0) {
             System.out.println("Cool!  Your numbers are: " + userNums);
             userName += userNums;
@@ -36,29 +37,26 @@ public class NameGenerator {
         System.out.println("Hope you like it!");
     }
 
-    public void doSpinner() throws InterruptedException {
-        for (int i = 0; i < 10; i++) {
-            System.out.print('/');
-            Thread.sleep(100);
-            System.out.print('\b');
-            System.out.print('-');
-            Thread.sleep(100);
-            System.out.print('\b');
-            System.out.print('\\');
-            Thread.sleep(100);
-            System.out.print('\b');
-            System.out.print("*");
+    public void doSpinner() {
+        try {
+            for (int i = 0; i < 10; i++) {
+                System.out.print('/');
+                Thread.sleep(100);
+                System.out.print('\b');
+                System.out.print('-');
+                Thread.sleep(100);
+                System.out.print('\b');
+                System.out.print('\\');
+                Thread.sleep(100);
+                System.out.print('\b');
+                System.out.print("*");
+            }
+        } catch (Exception e) {
+            // do nothing
         }
+
         System.out.println();
     }
 
-    public boolean checkInput(String userInput, String... expected){
-        for(String s : expected){
-            if(userInput.equalsIgnoreCase(s)){
-                return true;
-            }
-        }
-        System.out.println(userInput + " is not a valid selection, please try again!");
-        return false;
-    }
+
 }

@@ -5,16 +5,17 @@ import java.util.Scanner;
 
 public class Numbers {
 
-    public int makeUserNumbers(NameGenerator generator) {
+    public int makeUserNumbers() {
 
         String answer;
         Scanner scanner = new Scanner(System.in);
         String[] answers = {"y", "n", "yes", "no"};
+        Util util = new Util();
 
         System.out.println("Do you want numbers included at the end of the username also?");
         do {
             answer = scanner.next();
-        } while (!generator.checkInput(answer, answers));
+        } while (!util.checkInput(answer, answers));
 
         if (answer.startsWith("y")) {
             do {
@@ -23,7 +24,7 @@ public class Numbers {
                     return scanner.nextInt();
                 }
                 answer = scanner.next();
-            } while (!generator.checkInput(answer, "random"));
+            } while (!util.checkInput(answer, "random"));
             return randomDigits(999);
         }
         return 0;
