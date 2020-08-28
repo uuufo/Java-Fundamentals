@@ -1,5 +1,6 @@
 package labs_examples.objects_classes_methods.labs.oop.E_blackjack_v2;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Player {
@@ -18,6 +19,17 @@ public class Player {
         return hand.getHandValue() < 16;
     }
 
+    public int computerBetAI() {
+        Random rand = new Random();
+        int r;
+        if (hand.getHandValue() >= 17) {
+            r = rand.nextInt((potValue / 2) + 1) + (potValue / 2);
+        } else {
+            r = rand.nextInt((potValue / 2) + 1) + 1;
+        }
+        return r;
+    }
+
     public void placeBet() {
         int currentBet;
         if (potValue == 0) {
@@ -34,7 +46,7 @@ public class Player {
             }
             currentBet = scanner.nextInt();
         } else {
-            currentBet = 30;
+            currentBet = computerBetAI();
         }
         if (currentBet >= potValue) {
             currentBet = potValue;
@@ -71,6 +83,7 @@ public class Player {
 
     public boolean isBust() {
         isBust = hand.getHandValue() > 21;
+        isDone = isBust;
         return isBust;
     }
 

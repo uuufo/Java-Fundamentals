@@ -24,24 +24,8 @@ public class BlackjackController {
         do {
             deck = new Deck();
 
-            System.out.println("Game #" + Deck.getDecksPopulated());
-            System.out.println();
-            if (Deck.getDecksPopulated() > 1) {
-                System.out.println(humanPlayer.getGamesWon() + " games won by " + humanPlayer.getName() + ".");
-                System.out.println(cpuPlayer.getGamesWon() + " games won by " + cpuPlayer.getName() + ".");
-                System.out.println();
-            }
-
             freshGame(humanPlayer, cpuPlayer);
             dealFirstCards(humanPlayer, cpuPlayer, deck);
-
-            //check if anyone went bust
-            if (humanPlayer.isBust() || cpuPlayer.isBust()) {
-                if (humanPlayer.isBust()) {
-                    System.out.println("Well, looks like we went bust... So we aren't going to place any bets.");
-                }
-            }
-
 
             takeBets(humanPlayer, cpuPlayer);
             while (hitMe(humanPlayer, cpuPlayer, deck)) {
@@ -53,6 +37,13 @@ public class BlackjackController {
     }
 
     private void freshGame(Player user, Player cpu) {
+        System.out.println("Game #" + Deck.getDecksPopulated());
+        System.out.println();
+        if (Deck.getDecksPopulated() > 1) {
+            System.out.println(user.getGamesWon() + " games won by " + user.getName() + ".");
+            System.out.println(cpu.getGamesWon() + " games won by " + cpu.getName() + ".");
+            System.out.println();
+        }
         user.getHand().getCards().clear();
         cpu.getHand().getCards().clear();
         user.setDone(false);
@@ -136,7 +127,6 @@ public class BlackjackController {
                     user.getHand().printHand();
                     System.out.println("Total: " + user.getHand().getHandValue());
                     System.out.println();
-                    //wentBust(user); //check if user went bust
                     if (user.isBust()) {
                         System.out.println("Well, looks like we went bust... So we aren't going to place any more bets.");
                     }
@@ -147,7 +137,7 @@ public class BlackjackController {
             if (cpu.computerAI()) {
                 deck.deal(cpu);
                 System.out.println(cpu.getName() + " was dealt another card.");
-                cpu.isBust(); // check if cpu went bust, if so they are done
+                cpu.isBust();
             } else {
                 System.out.println(cpu.getName() + " did not take another card.");
                 cpu.setDone(true);
@@ -178,7 +168,7 @@ public class BlackjackController {
         if (cpu.isDone()) {
             System.out.println(cpu.getName() + " does not place a bet.");
         } else {
-            if (!cpu.isAllIn()  && cpu.getBetCount() < 2) {
+            if (!cpu.isAllIn() && cpu.getBetCount() < 2) {
                 cpu.placeBet();
             }
         }

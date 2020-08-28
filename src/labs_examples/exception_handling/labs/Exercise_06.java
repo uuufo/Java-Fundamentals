@@ -13,7 +13,7 @@ public class Exercise_06 {
         int[] nums = {0, 1, 2, 3};
         System.out.println("Lets handle some exceptions!");
         try {
-            testMethod(1, 0);
+            int y = testMethod(1, 0);
         } catch (ArithmeticException e) {
             System.out.println("Error, you can't divide by 0.");
         }
@@ -21,6 +21,6 @@ public class Exercise_06 {
 
     // try without throws
     public static int testMethod(int x, int y) {
-        return x/y;
+        return x / y;
     }
 }
