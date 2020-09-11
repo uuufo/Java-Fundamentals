@@ -45,12 +45,14 @@ public class Exercise_04 {
 
         try (BufferedWriter bufferOut = new BufferedWriter(new FileWriter(fileOut))) {
             for (Electronic e : electronics) {
-                bufferOut.write(e.getName() + ",");
-                bufferOut.write(e.getMake() + ",");
-                bufferOut.write(e.getModel() + ",");
-                bufferOut.write(e.getSerial() + ",");
-                bufferOut.write(e.getDesc());
-                bufferOut.newLine();
+                StringBuilder sb = new StringBuilder();
+                sb.append(e.getName()).append(",")
+                    .append(e.getMake()).append(",")
+                    .append(e.getModel()).append(",")
+                    .append(e.getSerial()).append(",")
+                    .append(e.getDesc())
+                    .append("\n");
+                bufferOut.write(sb.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();

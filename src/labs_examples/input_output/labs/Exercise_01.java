@@ -42,7 +42,5 @@ class Example {
                 e.printStackTrace();
             }
         }
-
-
     }
 }

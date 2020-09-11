@@ -14,9 +14,6 @@ class Exercise_06 {
         NumberThread thread1 = new NumberThread(numberWork, "Thread 1", true);
         NumberThread thread2 = new NumberThread(numberWork, "Thread 2", false);
 
-        // debugging multiple threads?
-        // threads always need to be pojos?
-
     }
 }
 

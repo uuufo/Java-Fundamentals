@@ -19,8 +19,7 @@ public class Exercise_06 {
         }
     }
 
-    // try without throws
-    public static int testMethod(int x, int y) {
+    public static int testMethod(int x, int y) throws ArithmeticException {
         return x / y;
     }
 }

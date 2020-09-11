@@ -15,7 +15,6 @@ class Exercise_05 {
 
         File file = new File("src/labs_examples/multi_threading/labs/Exercise_05/Exercise_05.dat");
         ThreadObject threadObject = new ThreadObject();
-        // it only works if you create the object here, and pass it into the thread, rather than creating it in the thread
 
         checkFile(file);
 

@@ -13,19 +13,19 @@ class Exercise_04 {
     public static void main(String[] args) {
 
         File file = new File("src/labs_examples/multi_threading/labs/Exercise_04.dat");
-        ThreadObject threadObject = new ThreadObject();
+        //ThreadObject threadObject = new ThreadObject();
         // it only works if you create the object here, and pass it into the thread, rather than creating it in the thread
 
         if (file.delete()) {
             try {
-                file.createNewFile();
+                boolean b = file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        ThreadDo thread1 = new ThreadDo("Thread 1", file, threadObject);
-        ThreadDo thread2 = new ThreadDo("Thread 2", file, threadObject);
+        ThreadDo thread1 = new ThreadDo("Thread 1", file);
+        ThreadDo thread2 = new ThreadDo("Thread 2", file);
     }
 }
 
@@ -33,12 +33,12 @@ class ThreadDo implements Runnable {
     String name;
     Thread thread;
     File file;
-    final ThreadObject threadObject;
+    ThreadObject threadObject = new ThreadObject();
 
-    public ThreadDo(String name, File file, ThreadObject obj) {
+    public ThreadDo(String name, File file) {
         this.name = name;
         this.file = file;
-        this.threadObject = obj;
+        //this.threadObject = obj;
         thread = new Thread(this, name);
         thread.start();
     }
@@ -54,8 +54,6 @@ class ThreadDo implements Runnable {
     public String getName() {
         return name;
     }
-
-
 }
 
 class ThreadObject {
