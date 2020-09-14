@@ -20,8 +20,7 @@ class Exercise_02 {
         System.out.println(sumNum(longArr));
         System.out.println(sumNum(doubleArr));
         System.out.println(sumNum(intArr));
-
-
+        
     }
 
     public static <T extends Number> float sumNum (ArrayList<T> ar) {
