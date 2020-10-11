@@ -37,5 +37,4 @@ public class Exercise_06 {
             System.out.print(i + " ");
         }
     }
-
 }

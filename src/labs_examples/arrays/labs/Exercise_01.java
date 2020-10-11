@@ -35,9 +35,5 @@ public class Exercise_01 {
 
         System.out.println("The sum of all 10 numbers is: " + s);
         System.out.println("The average of all 10 numbers is: " + a);
-
-
     }
-
-
 }

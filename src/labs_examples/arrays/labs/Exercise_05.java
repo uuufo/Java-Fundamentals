@@ -27,14 +27,14 @@ public class Exercise_05 {
             System.out.println();
         }
 
-        /* or is this better or same?
-        for (int i = nums.length - 1; i > -1; i--) {
-            for (int o = nums[i].length - 1; o > -1; o--) {
+        //better way
+        for (int i = nums.length - 1; i >= 0; i--) {
+            for (int o = nums[i].length - 1; o >= 0; o--) {
                 System.out.print(nums[i][o] + " ");
             }
             System.out.println();
         }
-        */
+
 
     }
 

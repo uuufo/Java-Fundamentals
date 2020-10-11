@@ -16,7 +16,10 @@ import java.util.Scanner;
  */
 
 public class Exercise_07 {
-
+    /**
+     * This is a java doc.
+     * @param args
+     */
     public static void main(String[] args) {
 
         Scanner prompt = new Scanner(System.in);

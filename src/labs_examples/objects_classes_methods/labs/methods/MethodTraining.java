@@ -70,7 +70,6 @@ public class MethodTraining {
         y *= 65;
         System.out.println("Inside passVal, x now equals " + x);
         System.out.println("Inside passVal, y now equals " + y);
-
     }
 
     static int[] revArray(int[] arr) {
@@ -106,8 +105,8 @@ public class MethodTraining {
     }
 
     static int[] getHiLo(int[] arr) {
-        int h = 0;
-        int l = 0;
+        int h = arr[0];
+        int l = arr[0];
         int[] m = new int[2];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > h) {
@@ -126,7 +125,7 @@ public class MethodTraining {
     }
 
     static int getLargeArr(int[] arr) {
-        int m = 0;
+        int m = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] > m) {
                 m = arr[i];
@@ -136,7 +135,7 @@ public class MethodTraining {
     }
 
     static double getLargeArr(double[] arr) {
-        double m = 0.0;
+        double m = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] > m) {
                 m = arr[i];
@@ -146,21 +145,22 @@ public class MethodTraining {
     }
 
     static int getLarge(int a, int b, int c, int d) {
-        int m = a;
-        if (b > m) {
-            m = b;
+        int largest = a;
+        if (b > largest) {
+            largest = b;
         }
-        if (c > m) {
-            m = c;
+        if (c > largest) {
+            largest = c;
         }
-        if (d > m) {
-            m = d;
+        if (d > largest) {
+            largest = d;
         }
-        return m;
+        return largest;
     }
 
     static int getConst(String s) {
-        String c = "bcdfghjklmnpqrstvwxyzBCDGHJKLMNPQRSTFWXYZ";
+        String c = "bcdfghjklmnpqrstvwxyz";
+        c = c.toLowerCase();
         int result = 0;
         for (int i = 0; i < s.length(); i++) {
             for (int x = 0; x < c.length(); x++) {
@@ -173,7 +173,8 @@ public class MethodTraining {
     }
 
     static int getConst2(String s) {
-        String v = "aeiouAEIOU";
+        s = s.toLowerCase();
+        String v = "aeiou";
         int result = s.length();
         for (int i = 0; i < s.length(); i++) {
             for (int x = 0; x < v.length(); x++) {

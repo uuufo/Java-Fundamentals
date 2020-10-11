@@ -18,6 +18,12 @@ public class Exercise_04 {
                 {"Tommy"}
         };
 
+        for (String[] firstDim : names) {
+            for (String name : firstDim) {
+                System.out.println(name);
+            }
+        }
+
         for (int i = 0; i < names.length; i++) {
             for (int o = 0; o < names[i].length; o++) {
                 System.out.print(names[i][o] + " ");

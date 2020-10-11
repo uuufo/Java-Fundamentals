@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 /**
  * Conditions and Loops Exercise 2: Days of the week
- *
- *      Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
- *      if the number from the user is 1, 2,... 7, or other respectively. Use a "nested-if" statement.
- *
+ * <p>
+ * Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
+ * if the number from the user is 1, 2,... 7, or other respectively. Use a "nested-if" statement.
  */
 
 public class Exercise_02 {
@@ -28,39 +27,28 @@ public class Exercise_02 {
 
         // 4) write completed code here
 
-        while (true) {
-
-            if (i < 11 && i > 0) {
-                if (i == 1) {
-                    System.out.println("Monday!");
-                    break;
-                } else if (i == 2) {
-                    System.out.println("Tuesday!");
-                    break;
-                } else if (i == 3) {
-                    System.out.println("Wednesday!");
-                    break;
-                } else if (i == 4) {
-                    System.out.println("Thursday!");
-                    break;
-                } else if (i == 5) {
-                    System.out.println("Friday!");
-                    break;
-                } else if (i == 6) {
-                    System.out.println("Saturday!");
-                    break;
-                } else if (i == 7) {
-                    System.out.println("Sunday!");
-                    break;
-                } else if (i > 7 && i < 11) {
-                    System.out.println("Other!");
-                    break;
-                }
-            } else {
-                System.out.print("Enter a number between 1 and 10! : ");
-                i = prompt.nextInt();
-                continue;
+        if (i < 11 && i > 0) {
+            if (i == 1) {
+                System.out.println("Monday!");
+            } else if (i == 2) {
+                System.out.println("Tuesday!");
+            } else if (i == 3) {
+                System.out.println("Wednesday!");
+            } else if (i == 4) {
+                System.out.println("Thursday!");
+            } else if (i == 5) {
+                System.out.println("Friday!");
+            } else if (i == 6) {
+                System.out.println("Saturday!");
+            } else if (i == 7) {
+                System.out.println("Sunday!");
+            } else if (i > 7 && i < 11) {
+                System.out.println("Other!");
             }
+        } else {
+            System.out.print("Enter a number between 1 and 10! : ");
+            i = prompt.nextInt();
+
         }
     }
 }
