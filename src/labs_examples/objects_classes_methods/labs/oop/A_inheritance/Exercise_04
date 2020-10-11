@@ -1,7 +1,7 @@
 
 Without running the code below, please tell me what it will print.
 
-
+**"Child Called" will print because the actual type of c is Child, and since it contains a doSomething() method it is called first.
 
 public class InheritanceTest
 {

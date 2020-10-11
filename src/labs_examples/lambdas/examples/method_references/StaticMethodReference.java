@@ -10,7 +10,7 @@ import java.util.function.BiFunction;
 class StaticMethodReference {
     public static void main(String[] args) {
 
-        // here's a lambda calling a static methdo
+        // here's a lambda calling a static method
         BiFunction<Integer, Integer, Integer> lambdaResult = (a, b) -> StaticMethodReference.multiply(a, b);
         int x = lambdaResult.apply(11, 5);
         System.out.println("Lambda product of given number is: " + x);

@@ -18,7 +18,7 @@ public class Exercise_01 {
 
         int s = 0;
         int a = 0;
-        int nums[] = new int[10];
+        int[] nums = new int[10];
 
         Scanner prompt = new Scanner(System.in);
         System.out.println("I'm going to prompt you to enter 10 numbers.");
