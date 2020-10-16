@@ -4,9 +4,19 @@ import java.util.Scanner;
 
 /**
  * Conditions and Loops Exercise 2: Days of the week
+<<<<<<< HEAD
  * <p>
  * Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
  * if the number from the user is 1, 2,... 7, or other respectively. Use a "nested-if" statement.
+=======
+ *
+ *      Take in a number from the user and print "Monday", "Tuesday", ... "Sunday", or "Other"
+ *      if the number from the user is 1, 2,... 7, or other respectively. Use an if-else statement
+ *      to accomplish this task.
+ * 
+ *      Bonus Tricky Challenge: Use a "nested-if" statement.
+ *
+>>>>>>> fc36c4b1b8c5d2bc07ff287dc39939c4a3926817
  */
 
 public class Exercise_02 {
