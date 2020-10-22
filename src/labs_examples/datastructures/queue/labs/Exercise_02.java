@@ -6,7 +6,7 @@ package labs_examples.datastructures.queue.labs;
  *      Write a new custom (Generic) Queue class that uses a traditional Array as the underlying data structure
  *      rather than the LinkedList as in the example we have already seen.
  *
- *      Your custom Queue class must also do the following: (Jared)
+ *      Your custom Queue class must also do the following:
  *
  *      1) throw a custom exception when trying to pop  an element from an empty Queue
  *      2) resize the Queue (the underlying array) to be twice the size when the Queue is more than 3/4 full
