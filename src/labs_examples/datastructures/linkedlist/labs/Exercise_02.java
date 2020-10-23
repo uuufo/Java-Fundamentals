@@ -60,6 +60,12 @@ class MyLinkedList<T> {
         System.out.println("- - - - -");
     }
 
+    /**
+     * This methods checks to see if the linkedlist contains a given element
+     *
+     * @param data - and element to search
+     * @return true or false - true if the linkedlist contains the element
+     */
     public boolean contains(T data) {
         if (head != null) {
             Node iterator = head;
@@ -91,7 +97,7 @@ class MyLinkedList<T> {
     }
 
     public void addFirst(T data) {
-        Node first = new Node (data);
+        Node<T> first = new Node<>(data);
         first.next = head;
         head.prev = first;
         head = first;

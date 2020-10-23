@@ -21,7 +21,7 @@ import java.util.Arrays;
 
 class Exercise_02 {
     public static void main(String[] args) throws EmptyStackException {
-        MyStringStack stack = new MyStringStack("1", "2", "3", "4");
+        MyStack<String> stack = new MyStack<>("1", "2", "3", "4");
         stack.print();
         stack.push("5");
         stack.print();
@@ -60,31 +60,34 @@ class Exercise_02 {
             stack.push(Integer.toString(i + 100));
         }
         stack.print();
+        String s = stack.pop();
+        System.out.println(s);
 
     }
 }
 
-class MyStringStack {
+class MyStack<T> {
 
-    String[] stack;
-    String[] tempStack;
+    private T[] stack;
+    private T[] tempStack;
 
-    public MyStringStack(String... data) {
+    @SuppressWarnings("unchecked")
+    public MyStack(T... data) {
         if (data.length < 1) {
             stack = null;
         } else {
             if (data.length < 4) {
-                stack = new String[4];
+                stack = (T[]) new Object[4];
             } else {
-                stack = new String[data.length + (data.length / 4)];
+                stack = (T[]) new Object[data.length + (data.length / 4)];
             }
-            for (String item : data) {
+            for (T item : data) {
                 push(item);
             }
         }
     }
 
-    public void push(String data) {
+    public void push(T data) {
         int count = 0;
         while (stack[count] != null) {
             count++;
@@ -101,10 +104,11 @@ class MyStringStack {
         stack[0] = data;
     }
 
-    public void pop() throws EmptyStackException {
+    public T pop() throws EmptyStackException {
         if (stack[0] == null) {
             throw new EmptyStackException();
         }
+        T data = stack[0];
         System.arraycopy(stack, 1, stack, 0, stack.length - 1);
 
         int count = 0;
@@ -115,11 +119,12 @@ class MyStringStack {
             tempStack = Arrays.copyOf(stack, stack.length / 2);
             stack = Arrays.copyOf(tempStack, tempStack.length);
         }
+        return data;
     }
 
     public int size() {
         int count = 0;
-        for (String s : stack) {
+        for (T s : stack) {
             if (s != null) {
                 count++;
             }
@@ -128,16 +133,16 @@ class MyStringStack {
     }
 
     public void print() {
-        for (String s : stack) {
+        for (T s : stack) {
             if (s != null) {
-                System.out.println(s);
+                System.out.println(s.toString());
             }
         }
         System.out.println("Current items in array: " + size());
         System.out.println("Current stack length: " + stack.length);
     }
 
-    public String peakFirst() {
+    public T peakFirst() {
         if (stack[0] == null) {
             return null;
         }
@@ -148,18 +153,9 @@ class MyStringStack {
         return stack[count - 1];
     }
 
-    public String peakLast() {
+    public T peakLast() {
         return stack[0];
     }
-/*
-    public <T> T[] initialize(Class<T> type, int length) {
-
-        T[] stack = new T[10];
-
-
-    }
-*/
-
 }
 
 class EmptyStackException extends Exception {
