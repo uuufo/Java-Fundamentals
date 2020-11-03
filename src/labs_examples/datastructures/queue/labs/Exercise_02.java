@@ -38,8 +38,8 @@ class Exercise_02 {
             queue.add(i + 100);
         }
         queue.print();
-        System.out.println("First item in stack: " + queue.peakFirst());
-        System.out.println("Last item in stack: " + queue.peakLast());
+        System.out.println("First item in queue: " + queue.peakFirst());
+        System.out.println("Last item in queue: " + queue.peakLast());
         for (int i = queue.size(); i > 0; i--) {
             queue.remove();
         }
