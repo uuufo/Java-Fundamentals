@@ -40,6 +40,8 @@ class Exercise_02 {
 
         Set<Integer> keys = m.keySet();
         Set<String> keys2 = m2.keySet();
+        System.out.println(m.size());
+        System.out.println(m2.size());
 
         System.out.println(m.get(100));
         System.out.println(m.get(5050));
@@ -53,6 +55,8 @@ class Exercise_02 {
 
         keys = m.keySet();
         keys2 = m2.keySet();
+        System.out.println(m.size());
+        System.out.println(m2.size());
 
         System.out.println(m.get(5050));
         System.out.println(m2.get("Test361"));
@@ -64,13 +68,19 @@ class Exercise_02 {
         keys = m.keySet();
         keys2 = m2.keySet();
 
+        System.out.println(m.size());
+        System.out.println(m2.size());
+
         System.out.println(m.isEmpty());
         System.out.println(m2.isEmpty());
+
+
     }
 }
 
 class MyHashMap<K, V> {
     private Entry<K, V>[] table = new Entry[16];
+    private int size = 0;
     boolean growing = false;
     boolean shrinking = false;
 
@@ -79,7 +89,7 @@ class MyHashMap<K, V> {
      *
      * @param key   to be added/updated
      * @param value value to be stored
-     * @return previous value if existing key is being updated
+     * @return previous value if existing key is being updated, or null if new pair is added
      */
     public V put(K key, V value) {
 
@@ -99,13 +109,19 @@ class MyHashMap<K, V> {
                 result = previous;
             } else {
                 iterator.next = entry;
+                if (!growing && !shrinking) {
+                    size++;
+                }
                 result = null;
             }
         } else {
             table[index] = entry;
+            if (!growing && !shrinking) {
+                size++;
+            }
             result = null;
         }
-        if (keySet().size() > table.length - (table.length / 4) && !shrinking) {
+        if (size > table.length - (table.length / 4) && !shrinking) {
             grow();
         }
         return result;
@@ -158,6 +174,9 @@ class MyHashMap<K, V> {
             }
             if (iterator.getKey().equals(key)) {
                 result = iterator.getValue();
+                if (!growing && !shrinking) {
+                    size--;
+                }
                 if (previous.getKey().equals(iterator.getKey())) {
                     table[index] = null;
                 } else {
@@ -169,7 +188,7 @@ class MyHashMap<K, V> {
         } else {
             result = null;
         }
-        if (keySet().size() < table.length / 4 && table.length > 16 && !growing) {
+        if (size < table.length / 4 && table.length > 16 && !growing) {
             shrink();
         }
         return result;
@@ -221,7 +240,7 @@ class MyHashMap<K, V> {
      * @return count
      */
     public int size() {
-        return keySet().size();
+        return size;
     }
 
     /**
@@ -268,12 +287,11 @@ class MyHashMap<K, V> {
      * @return true if HashMap contains no key-value pairs
      */
     public boolean isEmpty() {
-        for (Entry entry : table) {
-            if (entry != null) {
-                return false;
-            }
+        if (size == 0) {
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
 
 
