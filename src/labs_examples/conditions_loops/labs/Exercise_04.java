@@ -15,5 +15,4 @@ public class Exercise_04 {
             System.out.println(i);
         }
     }
-
 }

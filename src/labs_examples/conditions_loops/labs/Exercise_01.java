@@ -30,6 +30,5 @@ public class Exercise_01 {
         } else {
             System.out.println(number + " is an odd number.");
         }
-
     }
 }

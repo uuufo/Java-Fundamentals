@@ -43,5 +43,4 @@ public class Class1 {
         System.out.println("Package 1 Protected Printing");
         return true;
     }
-
 }

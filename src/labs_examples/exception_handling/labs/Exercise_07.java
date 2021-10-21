@@ -1,7 +1,5 @@
 package labs_examples.exception_handling.labs;
 
-import com.sun.crypto.provider.HmacMD5KeyGenerator;
-
 /**
  * Exception Handling Exercise 7:
  * <p>

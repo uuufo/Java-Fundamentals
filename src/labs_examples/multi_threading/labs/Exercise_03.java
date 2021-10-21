@@ -25,6 +25,7 @@ class ThreadTest2 extends Thread {
         setPriority(priority);
         start();
     }
+
     @Override
     public void run() {
         System.out.println(getName() + " starting.");

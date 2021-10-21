@@ -6,7 +6,7 @@ package labs_examples.datatypes_operators.labs;
  * AND, short-circuit AND, OR, short-circuit OR, XOR, NOT
  *
  */
-class LogicalOperators {
+class Exercise_05 {
 
     public static void main(String[] args) {
 
@@ -52,9 +52,6 @@ class LogicalOperators {
         if (!b) {
             System.out.println("b is false");
         }
-
-
     }
-
 }
 

@@ -26,7 +26,5 @@ public class Exercise_03 {
         int z = x + y;
 
         System.out.println("z = " + z);
-
     }
-
 }

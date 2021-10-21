@@ -23,7 +23,5 @@ class Exercise_01 {
         q.add("Add");
         System.out.println(q.size());
         q.clear();
-
-
     }
 }

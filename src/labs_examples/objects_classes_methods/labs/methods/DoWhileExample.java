@@ -21,7 +21,5 @@ public class DoWhileExample {
         } while (count < 10);
 
         return val;
-
     }
-
 }

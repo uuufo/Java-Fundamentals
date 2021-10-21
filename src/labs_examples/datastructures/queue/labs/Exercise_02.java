@@ -3,20 +3,19 @@ package labs_examples.datastructures.queue.labs;
 import java.util.Arrays;
 
 /**
- *      Queues - Exercise_02
- *
- *      Write a new custom (Generic) Queue class that uses a traditional Array as the underlying data structure
- *      rather than the LinkedList as in the example we have already seen.
- *
- *      Your custom Queue class must also do the following:
- *
- *      1) throw a custom exception when trying to pop  an element from an empty Queue
- *      2) resize the Queue (the underlying array) to be twice the size when the Queue is more than 3/4 full
- *      3) resize the Queue (the underlying array) to be half the size when the Queue is more than 3/4 empty
- *      4) contain the methods peekFirst() and peekLast()
- *      5) contain a size() method
- *      6) contain a method to print out the data of all elements in the Queue
- *
+ * Queues - Exercise_02
+ * <p>
+ * Write a new custom (Generic) Queue class that uses a traditional Array as the underlying data structure
+ * rather than the LinkedList as in the example we have already seen.
+ * <p>
+ * Your custom Queue class must also do the following:
+ * <p>
+ * 1) throw a custom exception when trying to pop  an element from an empty Queue
+ * 2) resize the Queue (the underlying array) to be twice the size when the Queue is more than 3/4 full
+ * 3) resize the Queue (the underlying array) to be half the size when the Queue is more than 3/4 empty
+ * 4) contain the methods peekFirst() and peekLast()
+ * 5) contain a size() method
+ * 6) contain a method to print out the data of all elements in the Queue
  */
 
 class Exercise_02 {
@@ -43,7 +42,6 @@ class Exercise_02 {
         for (int i = queue.size(); i > 0; i--) {
             queue.remove();
         }
-
     }
 }
 
@@ -55,17 +53,17 @@ class MyQueue<T> {
 
     @SuppressWarnings("unchecked")
     public MyQueue(T... data) {
-            if (data.length < 6) {
-                queue = (T[]) new Object[8];
-            } else {
-                int a = (data.length / 8) * 8;
-                int b = a + 8;
-                int x = (data.length - a > b - data.length)? b : a;
-                queue = (T[]) new Object[x];
-            }
-            for (T item : data) {
-                add(item);
-            }
+        if (data.length < 6) {
+            queue = (T[]) new Object[8];
+        } else {
+            int a = (data.length / 8) * 8;
+            int b = a + 8;
+            int x = (data.length - a > b - data.length) ? b : a;
+            queue = (T[]) new Object[x];
+        }
+        for (T item : data) {
+            add(item);
+        }
     }
 
     public void add(T data) {

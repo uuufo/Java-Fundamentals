@@ -1,18 +1,17 @@
 package labs_examples.arrays.labs;
 
 /**
- *  Traversing Arrays Backwards
+ * Traversing Arrays Backwards
  *
- *      Please create and populate an array of your choosing. Then, please demonstrate how to print out every other
- *      element in the array in reverse order.
- *
+ * Please create and populate an array of your choosing. Then, please demonstrate how to print out every other
+ * element in the array in reverse order.
  */
 
 public class Exercise_05 {
 
     public static void main(String[] args) {
 
-        int nums[][] = new int[3][7];
+        int[][] nums = new int[3][7];
 
         for (int i = 0; i < nums.length; i++) {
             for (int o = 0; o < nums[i].length; o++) {
@@ -34,8 +33,5 @@ public class Exercise_05 {
             }
             System.out.println();
         }
-
-
     }
-
 }

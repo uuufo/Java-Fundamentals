@@ -1,8 +1,5 @@
 package labs_examples.lambdas.labs;
 
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-
 /**
  * Lambdas Exercise 3:
  *

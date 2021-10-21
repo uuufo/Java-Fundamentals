@@ -22,9 +22,7 @@ class Example {
         // OR
 
         System.out.println(myCar.toString());
-
     }
-
 }
 
 class Engine {
@@ -32,9 +30,7 @@ class Engine {
     double horsePower;
 
     public Engine(double horsePower){
-
         this.horsePower = horsePower;
-
     }
 
     @Override
@@ -50,9 +46,7 @@ class Stereo {
     String brand;
 
     public Stereo(String brand){
-
         this.brand = brand;
-
     }
 
     @Override
@@ -66,23 +60,15 @@ class Stereo {
 class Car {
 
     Engine engine;
-
     Stereo stereo;
-
     String model;
-
     String color;
 
     public Car(Engine engine, Stereo stereo, String model, String color){
-
         this.engine = engine;
-
         this.stereo = stereo;
-
         this.model = model;
-
         this.color = color;
-
     }
 
     @Override

@@ -16,6 +16,4 @@ public class Class2 {
         System.out.println("Package 2 Protected Printing");
         return true;
     }
-
-
 }

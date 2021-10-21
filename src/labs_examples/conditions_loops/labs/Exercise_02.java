@@ -52,13 +52,12 @@ public class Exercise_02 {
                 System.out.println("Saturday!");
             } else if (i == 7) {
                 System.out.println("Sunday!");
-            } else if (i > 7 && i < 11) {
+            } else {
                 System.out.println("Other!");
             }
         } else {
             System.out.print("Enter a number between 1 and 10! : ");
             i = prompt.nextInt();
-
         }
     }
 }

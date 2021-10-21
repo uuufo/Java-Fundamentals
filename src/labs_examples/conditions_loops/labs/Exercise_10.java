@@ -17,6 +17,5 @@ public class Exercise_10 {
             }
             System.out.println(i);
         }
-
     }
 }

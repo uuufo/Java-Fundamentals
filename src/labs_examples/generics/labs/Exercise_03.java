@@ -87,5 +87,4 @@ class Exercise_03 {
         }
         return count;
     }
-
 }

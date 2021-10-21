@@ -39,6 +39,5 @@ public class Exercise_05 {
         System.out.println("Upper range: " + y);
         System.out.println("The sum is: " + z);
         System.out.println("The average is: " + z / intBetween);
-
     }
 }

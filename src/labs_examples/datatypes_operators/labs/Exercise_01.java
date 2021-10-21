@@ -29,8 +29,6 @@ public class Exercise_01 {
         System.out.println("20 + 25 = " + i);
         System.out.println(c + "ello!");
         System.out.println(d + f);
-
-
     }
 }
 

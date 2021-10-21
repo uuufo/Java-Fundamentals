@@ -71,9 +71,6 @@ class Exercise_01 {
         for (String s : list3) {
             System.out.println(s);
         }
-
-
-
     }
 }
 

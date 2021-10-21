@@ -13,7 +13,6 @@ public class BlackjackController {
 
     public static void playBlackJack() {
 
-
         /*
         player = createPlayer()
         ...

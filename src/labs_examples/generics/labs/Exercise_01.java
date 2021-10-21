@@ -22,7 +22,6 @@ public class Exercise_01 {
     }
 }
 
-
 class Computer<T, K> {
     T brand;
     K speed;

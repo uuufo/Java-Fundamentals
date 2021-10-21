@@ -8,7 +8,6 @@ package labs_examples.multi_threading.labs;
  *
  */
 
-
 class Exercise_01 {
     public static void main(String[] args) {
 

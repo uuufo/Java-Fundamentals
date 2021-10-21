@@ -16,7 +16,5 @@ public class Exercise_08 {
             System.out.println(i);
             i -= 3;
         } while (i > 0);
-
     }
-
 }

@@ -26,6 +26,5 @@ class Exercise_01 {
         System.out.println(myStack.peek());
         System.out.println(myStack.search(5));
         System.out.println(myStack.search(1));
-
     }
 }

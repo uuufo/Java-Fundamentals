@@ -31,7 +31,6 @@ public class Exercise_02 {
         System.out.println(planeSeats.toString());
 
     }
-
 }
 
 class Airplane {

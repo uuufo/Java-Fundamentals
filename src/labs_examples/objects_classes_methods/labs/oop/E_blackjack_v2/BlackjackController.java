@@ -231,5 +231,4 @@ public class BlackjackController {
         System.out.println();
         return false;
     }
-
 }

@@ -22,7 +22,6 @@ class Exercise {
 
         System.out.println(myAirplane.toString());
     }
-
 }
 
 class Airplane {

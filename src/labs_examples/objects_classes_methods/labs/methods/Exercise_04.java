@@ -21,7 +21,5 @@ public class Exercise_04 {
             return 1;
         }
     }
-
-
 }
 

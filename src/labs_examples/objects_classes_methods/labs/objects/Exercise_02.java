@@ -10,9 +10,7 @@ public class Exercise_02 {
         System.out.println(guy.name + " lives in " + guy.town + " and loves his pet dog " + guy.pet.getName() + ".");
         System.out.println(guy.pet.getName() + " is a " + guy.pet.getBreed() + " and weighs " + fluffy.weight + "lbs.");
         System.out.println();
-
     }
-
 }
 
 class Dog {

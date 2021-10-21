@@ -6,7 +6,7 @@ package labs_examples.datatypes_operators.labs;
  * less than, less than or equal to, greater than, greater than or equal to, and equal to
  *
  */
-class RelationalOperators {
+class Exercise_04 {
 
     public static void main(String[] args) {
 
@@ -44,8 +44,6 @@ class RelationalOperators {
             System.out.println(x + " does not equal " + y);
         }
 
-
     }
-
 }
 

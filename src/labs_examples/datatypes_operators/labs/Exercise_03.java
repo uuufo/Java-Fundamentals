@@ -6,7 +6,7 @@ package labs_examples.datatypes_operators.labs;
  * addition, subtraction, multiplication, division and modulus
  *
  */
-class ArithmeticOperators {
+class Exercise_03 {
 
     public static void main(String[] args) {
 
@@ -17,7 +17,5 @@ class ArithmeticOperators {
         System.out.println("(20 + 5) * 20 = " + z);
         System.out.println("500 / 5 = " + z / 5);
         System.out.println("100 modulus 33 = " + 100 % 33); //because 100 / 33 leave a remainder of 1 (33 * 3 = 99 + 1)
-
     }
-
 }

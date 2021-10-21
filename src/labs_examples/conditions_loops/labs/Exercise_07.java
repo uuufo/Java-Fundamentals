@@ -16,10 +16,7 @@ import java.util.Scanner;
  */
 
 public class Exercise_07 {
-    /**
-     * This is a java doc.
-     * @param args
-     */
+
     public static void main(String[] args) {
 
         Scanner prompt = new Scanner(System.in);
@@ -38,17 +35,14 @@ public class Exercise_07 {
             i++;
         }
 
+        // old code - not using a while loop as instructed
 
-        // old code before i realized this needed to use a while loop
-
-        /* for (int i = 0; i < w.length(); i++) {
-            if (vowels.indexOf(w.charAt(i)) > -1) {
-                System.out.println("The word is: " + w);
-                System.out.println("The first vowel is: " + w.charAt(i));
-                break;
-            }
-        } */
-
+//         for (int j = 0; j < w.length(); j++) {
+//            if (vowels.indexOf(w.charAt(j)) > -1) {
+//                System.out.println("The word is: " + w);
+//                System.out.println("The first vowel is: " + w.charAt(j));
+//                break;
+//            }
+//        }
     }
-
 }

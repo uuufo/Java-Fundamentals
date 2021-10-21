@@ -21,8 +21,6 @@ class Exercise_01 {
         System.out.println("Current produce: " + curProduce.name() + " is a " + curProduce.getType());
         curProduce = Grocery.Produce.CARROT;
         System.out.println("Current produce: " + curProduce.name() + " is a " + curProduce.getType());
-
-
     }
 
     public static void getDairyType(Grocery.Dairy dairy) {

@@ -73,8 +73,6 @@ class Exercise_02 {
 
         System.out.println(m.isEmpty());
         System.out.println(m2.isEmpty());
-
-
     }
 }
 
@@ -293,8 +291,6 @@ class MyHashMap<K, V> {
             return false;
         }
     }
-
-
 }
 
 class Entry<K, V> {

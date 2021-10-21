@@ -57,6 +57,4 @@ public class NameGenerator {
 
         System.out.println();
     }
-
-
 }
