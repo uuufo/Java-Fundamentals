@@ -1,6 +1,6 @@
 package labs_examples.datastructures.additional_examples.trie;
 
-import packages.data_structures.exceptions.IllegalCharacterException;
+import labs_examples.datastructures.additional_examples.exceptions.IllegalCharacterException;
 
 import java.util.ArrayList;
 

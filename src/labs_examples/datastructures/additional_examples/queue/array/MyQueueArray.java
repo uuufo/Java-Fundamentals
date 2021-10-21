@@ -1,6 +1,6 @@
 package labs_examples.datastructures.additional_examples.queue.array;
 
-import packages.data_structures.exceptions.EmptyQueueException;
+import labs_examples.datastructures.additional_examples.exceptions.EmptyQueueException;
 
 import java.util.Arrays;
 

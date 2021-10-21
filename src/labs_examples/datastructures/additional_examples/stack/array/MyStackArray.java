@@ -1,6 +1,6 @@
 package labs_examples.datastructures.additional_examples.stack.array;
 
-import packages.data_structures.exceptions.EmptyStackException;
+import labs_examples.datastructures.additional_examples.exceptions.EmptyStackException;
 
 import java.util.Arrays;
 

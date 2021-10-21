@@ -1,6 +1,6 @@
 package labs_examples.datastructures.additional_examples.tree;
 
-import packages.data_structures.queue.array.MyQueueArray;
+import labs_examples.datastructures.additional_examples.queue.array.MyQueueArray;
 
 import java.util.HashMap;
 
